@@ -4,6 +4,8 @@ Each release's page on GitHub has its notes and measurements. See [the 1.0.0 rel
 
 ## Unreleased
 
+- Living Weights: a lesson no longer stops at its first step with `LayerRoundsAgain` (2 of 7 Nemotron lessons on a Mac and both on a GB10 before this). New fits are written on the 4-bit grid before they're judged, so rounding a taught layer again keeps its values; a lesson that still can't round says so in words; and the guide explains why the same lesson can take different steps on separate runs (fixes #1807).
+
 - DeepSeek-V4.1-Flash-1017's release checkpoint is read as published (FP8 blocks, MXFP4 experts and the FP8 Engram table), with a manifest-checked Engram pack; the CUDA engine refuses it by name, as it runs EXL3 (#1705, part of #1676). Thanks to @gilby.
 
 - Windows: the server loads the grammar library as `tfgrammar.dll`, so structured output and required or named tool calls serve there too (#1796, fixes #1789). Thanks to @wesley4546.
