@@ -4,6 +4,8 @@ Each release's page on GitHub has its notes and measurements. See [the 1.0.0 rel
 
 ## Unreleased
 
+- Lane rounds count the time each stream spends in grammar mask fills, per round and per reply, reported with the round metrics; nothing is read when no stream is constrained, and behaviour is unchanged (part of #1455).
+
 - DeepSeek-V4.1-Flash-1017's release checkpoint is read as published (FP8 blocks, MXFP4 experts and the FP8 Engram table), with a manifest-checked Engram pack; the CUDA engine refuses it by name, as it runs EXL3 (#1705, part of #1676). Thanks to @gilby.
 
 - Windows: the server loads the grammar library as `tfgrammar.dll`, so structured output and required or named tool calls serve there too (#1796, fixes #1789). Thanks to @wesley4546.
